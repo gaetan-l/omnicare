@@ -1,0 +1,138 @@
+/* Variables definition */
+:root {
+  --space-base: 12px;
+  --space-menuBarHeight: calc(4 * var(--space-base));
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 80%;
+  margin: auto;
+}
+
+body > header, body > main, body > footer {
+  margin: var(--space-base);
+}
+
+body > header, body > footer {
+  padding: var(--space-base);
+}
+
+main > section:not(:first-child) {
+  margin-top: calc(4 * var(--space-base));
+}
+
+p {
+  margin-bottom: 6px;
+}
+
+/* Menu bar */
+nav#menuBar {
+  position: sticky;
+  top: 0;
+  height: var(--space-menuBarHeight);
+  z-index: 100;
+}
+
+nav#menuBar ul {
+  overflow: hidden;
+}
+
+nav#menuBar li {
+  float: left;
+}
+nav#menuBar li {
+  padding: var(--space-base);
+}
+
+/* Patient informations */
+header#patientInfo {
+  overflow-y: auto;
+}
+
+section#patientIdentification {
+  float: left;
+  width: 40%;
+}
+
+section#patientMedicalDetails {
+  overflow: hidden;
+  margin-bottom: calc(-1 * var(--space-base));
+  padding-left: 36px;
+}
+
+section#patientMedicalDetails li {
+  float: left;
+}
+section#patientMedicalDetails li.tag {
+  padding: 6px;
+  margin: 0 var(--space-base) var(--space-base) 0;
+}
+
+/* Table structure */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+div.headersTable {
+  overflow-x: auto;
+  position: sticky;
+  top: var(--space-menuBarHeight);
+  z-index: 1;
+}
+
+div.headersTable th {
+  padding-bottom:0;
+  border-bottom: var(--space-base) solid transparent;
+}
+
+div.contentTable {
+  overflow-x: hidden;
+}
+
+table.fixedLeft th:nth-child(1) {
+  position: sticky;
+  left: 0;
+  border-right: var(--space-base) solid transparent; /* so that size don't change when hovering */
+}
+
+th, td {
+  text-align: center;
+  padding: var(--space-base);
+}
+
+div.contentTable th, div.contentTable td {
+  height: 60px;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.wSmall {
+  width: 50px;
+}
+
+.wMedium {
+  width: 125px;
+}
+
+.wDoubleMedium {
+  width: 274px;
+}
+
+.wLarge {
+  width: 250px;
+}
+
+.wVeryLarge {
+  width: 500px;
+}

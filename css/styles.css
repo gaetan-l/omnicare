@@ -1,0 +1,131 @@
+/* Variables definition */
+:root {
+  --color-clear: white;
+  --color-medium: #f7f7f7;
+  --color-dark: black;
+
+  /* Theme colors */
+  /* First RBG values to be able to add opacity later
+     to create different shades, do not use these in CSS */
+  --rgb-theme-1: 196, 246, 162;
+  --rgb-theme-2: 151, 199, 197;
+  --rgb-theme-3: 245, 188, 233;
+
+  /* Main theme colors without description */
+  --color-theme-1: rgb(var(--rgb-theme-1));
+  --color-theme-2: rgb(var(--rgb-theme-2));
+  --color-theme-3: rgb(var(--rgb-theme-3));
+
+  /* Lighter versions */
+  --color-theme-1-light: rgba(var(--rgb-theme-1), 0.5);
+  --color-theme-2-light: rgba(var(--rgb-theme-2), 0.5);
+  --color-theme-3-light: rgba(var(--rgb-theme-3), 0.5);
+
+  /* Negative/neutral/positive description using theme colors */
+  --color-theme-positive: var(--color-theme-1);
+  --color-theme-positive-light: var(--color-theme-1-light);
+  --color-theme-neutral: var(--color-theme-2);
+  --color-theme-neutral-light: var(--color-theme-2-light);
+  --color-theme-negative: var(--color-theme-3);
+  --color-theme-negative-light: var(--color-theme-3-light);
+}
+
+/* Fonts */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6, strong, .strong, th {
+  font-weight: 300;
+}
+
+.breezy {
+  font-weight: 200;
+  font-style: italic;
+}
+
+em, .em /* Italic text */ {
+  font-style: italic;
+}
+
+/* Colors */
+nav#menuBar {
+  background-color: var(--color-clear);
+}
+
+header {
+  background-color: var(--color-medium);
+}
+
+section#patientMedicalDetails li.tag {
+  border-radius: 6px;
+}
+
+section#patientMedicalDetails li.equipment.tag {
+  background: var(--color-theme-1);
+}
+
+section#patientMedicalDetails li.medicalHistory.tag {
+  background: var(--color-theme-2);
+}
+
+section#patientMedicalDetails li.medicalInstructions.tag {
+  background: var(--color-theme-3);
+}
+
+div.headersTable tr th, div.headersTable tr td, 
+div.contentTable tr:nth-child(even) th, div.contentTable tr:nth-child(even) td {
+  background-color: var(--color-clear);
+}
+
+div.contentTable tr:nth-child(odd) th, div.contentTable tr:nth-child(odd) td {
+  background-color: var(--color-medium);
+}
+
+/* General styles */
+ul {
+  list-style-type: none;
+}
+
+/* Menu bar */
+nav#menuBar li:hover {
+  background: var(--color-medium);
+  cursor: pointer;
+}
+
+/* Tables */
+div.contentTable td:nth-last-child(-n+24):hover, div.headersTable th:nth-last-child(-n+24):hover {
+  cursor: pointer;
+}
+
+div.headersTable th.cellHighlight {
+  border-bottom: 12px solid var(--color-theme-neutral);
+}
+
+div.contentTable th.cellHighlight {
+  border-right: 12px solid var(--color-theme-neutral);
+}
+
+div.contentTable tr /* tr mandatory to override odd/even background color rule */ td.cellHighlight {
+  background-color: var(--color-theme-neutral-light);
+}
+
+div.contentTable tr /* tr mandatory to override odd/even background color rule */ td.cellSelected {
+  background-color: var(--color-theme-negative-light);
+}
+
+div.contentTable tr /* tr mandatory to override odd/even background color rule */ td.validated {
+  /*
+  background-color: var(--color-theme-positive-light);
+  */
+}
+
+div.contentTable td.planned::before {
+  content: "●";
+}
+
+div.contentTable td.validated::before {
+  content: "✓";
+}

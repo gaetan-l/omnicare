@@ -1,0 +1,427 @@
+<!doctype html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Plan de soins</title>
+    <meta name="description" content="Plan de soins">
+    <meta name="author" content="Gaetan Leu">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/structure.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="scripts/contextmenu/jquery.contextMenu.min.css">
+    <link rel="stylesheet" href="css/contextmenu.css">
+  </head>
+
+  <body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script src="js/syncscroll.js"></script>
+
+    <nav id="menuBar">
+      <ul>
+        <li><u>F</u>ichier</li>
+        <li><u>N</u>avigation</li>
+        <li><u>O</u>ptions</li>
+        <li><u>A</u>ide</li>
+      </ul>
+    </nav>
+
+    <header id="patientInfo">
+      <section id="patientIdentification">
+        <p>
+          <span id="patientFirstName" class="strong">Georges</span>
+          <span id="patientFirstName" class="strong">Abitbol</span>,
+          <span id="patientAge">48 ans</span>,
+          <span id="patientSex">♂</span>
+        </p>
+        <p>
+          <span id="patientUniqueIdentifier">IPP : 587416983</span>
+        </p>
+        <p>
+          <span id="patientDob">Né le 21 septembre 1971</span>
+        </p>
+        <p>
+          <span id="patientAdmissionReason">Admis le 13 août 2019 pour neuropathie de réanimation</span>
+        </p>
+      </section>
+      <section id="patientMedicalDetails">
+        <ul>
+          <li class="equipment tag">Drain de Kehr</li>
+          <li class="equipment tag">KTA: avant-bras G</li>
+          <li class="equipment tag">Optiflow</li>
+          <li class="equipment tag">SU: G</li>
+          <li class="equipment tag">SU: D</li>
+          <li class="equipment tag">SV</li>
+          <li class="equipment tag">VVC: jugulaire G</li>
+          <li class="equipment tag">VVP: avant-bras D</li>
+          <li class="medicalHistory tag">DNID</li>
+          <li class="medicalHistory tag">Dyslipidémie</li>
+          <li class="medicalHistory tag">HTA</li>
+          <li class="medicalHistory tag">IRA</li>
+          <li class="medicalInstructions tag">Boisson : Eau gazeuse</li>
+          <li class="medicalInstructions tag">Lever : autorisé</li>
+          <li class="medicalInstructions tag">Nourriture : mixée</li>
+        </ul>
+      </section>
+    </header>
+
+    <main>
+      <section id="medicalTreatment">
+        <h1>Thérapeutique</h1>
+        <div class="headersTable syncscroll" name="schedule">
+          <table class="fixedLeft">
+            <tr>
+              <th class="wVeryLarge alignLeft">Nom commercial et DCI</th>
+              <th class="wMedium">Posologie</th>
+              <th class="wMedium">Voie</th>
+              <th class="wSmall">6</th>
+              <th class="wSmall">7</th>
+              <th class="wSmall">8</th>
+              <th class="wSmall">9</th>
+              <th class="wSmall">10</th>
+              <th class="wSmall">11</th>
+              <th class="wSmall">12</th>
+              <th class="wSmall">13</th>
+              <th class="wSmall">14</th>
+              <th class="wSmall">15</th>
+              <th class="wSmall">16</th>
+              <th class="wSmall">17</th>
+              <th class="wSmall">18</th>
+              <th class="wSmall">19</th>
+              <th class="wSmall">20</th>
+              <th class="wSmall">21</th>
+              <th class="wSmall">22</th>
+              <th class="wSmall">23</th>
+              <th class="wSmall">0</th>
+              <th class="wSmall">1</th>
+              <th class="wSmall">2</th>
+              <th class="wSmall">3</th>
+              <th class="wSmall">4</th>
+              <th class="wSmall">5</th>
+            </tr>
+          </table>
+        </div>
+        <div class="contentTable syncscroll" name="schedule">
+          <table class="fixedLeft">
+            <tr>
+              <th class="wVeryLarge alignLeft">
+                <p>Augmentin®</p>
+                <p class="breezy">amoxicilline + acide clavulanique</p>
+              </th>
+              <td class="wMedium">3×/j</td>
+              <td class="wMedium">IV</td>
+              <td class="wSmall planned"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall planned"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall planned"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+            </tr>
+            <tr>
+              <th class="alignLeft">
+                <p>Inexium®</p>
+                <p class="breezy">ésoméprazole</p>
+              </th>
+              <td>1×/j</td>
+              <td>PO</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="planned"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th class="alignLeft">
+                <p>Kardégic®</p>
+                <p class="breezy">acétylsalicylate de lysine</p>
+              </th>
+              <td>1×/j</td>
+              <td>PO</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="planned"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th class="alignLeft">
+                <p>Lovénox®</p>
+                <p class="breezy">énoxaparine sodique</p>
+              </th>
+              <td>1×/j</td>
+              <td>SC</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="planned"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th class="alignLeft">
+                <p>Doliprane®</p>
+                <p class="breezy">paracétamol</p>
+              </th>
+              <td>4×/j SB</td>
+              <td>PO</td>
+              <td class="planned"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="planned"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="planned"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="planned"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <section id="medicalCare">
+        <h1>Soins</h1>
+        <div class="headersTable syncscroll" name="schedule">
+          <table class="fixedLeft">
+            <tr>
+              <th class="wVeryLarge alignLeft">Soin</th>
+              <th class="wDoubleMedium">Détails</th>
+              <th class="wSmall">6</th>
+              <th class="wSmall">7</th>
+              <th class="wSmall">8</th>
+              <th class="wSmall">9</th>
+              <th class="wSmall">10</th>
+              <th class="wSmall">11</th>
+              <th class="wSmall">12</th>
+              <th class="wSmall">13</th>
+              <th class="wSmall">14</th>
+              <th class="wSmall">15</th>
+              <th class="wSmall">16</th>
+              <th class="wSmall">17</th>
+              <th class="wSmall">18</th>
+              <th class="wSmall">19</th>
+              <th class="wSmall">20</th>
+              <th class="wSmall">21</th>
+              <th class="wSmall">22</th>
+              <th class="wSmall">23</th>
+              <th class="wSmall">0</th>
+              <th class="wSmall">1</th>
+              <th class="wSmall">2</th>
+              <th class="wSmall">3</th>
+              <th class="wSmall">4</th>
+              <th class="wSmall">5</th>
+            </tr>
+          </table>
+        </div>
+        <div class="contentTable syncscroll" name="schedule">
+          <table class="fixedLeft">
+            <tr>
+              <th class="wVeryLarge alignLeft">Soins de bouche</th>
+              <td class="wDoubleMedium">3×/j</td>
+              <td class="wSmall planned"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall planned"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall planned"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+              <td class="wSmall"></td>
+            </tr>
+            <tr>
+              <th class="alignLeft">Frictionnage points d'appui</th>
+              <td>1×/j</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="planned"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th class="alignLeft">Soins de trachéotomie</th>
+              <td>1×/j</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="planned"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th class="alignLeft">Toilette complète au lit</th>
+              <td>1×/j</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="planned"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
